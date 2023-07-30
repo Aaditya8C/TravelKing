@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:ital,wght@0,200;0,400;0,600;1,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Poppins:ital,wght@0,200;0,400;0,600;1,700&display=swap'); */
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -16,7 +19,12 @@
   }
 }
 
-body {
+body{
+  font-family: sans-serif;
+  background-color: #FFFFFF;
+}
+
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +32,47 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+.landingOne{
+  background-image: url('../public/Assets/Images/cityOne.jpg'),linear-gradient(rgba(126, 81, 143, 1),rgba(126, 81, 143, 1));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-blend-mode: overlay;
+}
+.landingTwo{
+  background-image: url('../public/Assets/Images/cityTwo.jpg'),linear-gradient(rgba(126, 81, 143, 1),rgba(126, 81, 143, 1));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-blend-mode: overlay;
+}
+
+/* .navLinks::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform-origin: bottom right;
+  background-color: violet;
+
+}
+.navLinks:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+} */
+
+.gradient-transition {
+  background-image: linear-gradient(to right, #fa9e1b, #8d4fff, #fa9e1b);
+  background-size: 200% 100%;
+  transition: background-position 0.5s;
+}
+
+.gradient-transition:hover {
+  background-position: 100% 0;
 }

@@ -12,6 +12,13 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        Pacifico:['Pacifico', 'cursive'],
+        Lobster:['Lobster', 'cursive'],
+      },
+      colors:{
+        'dark-blue':'rgba(54, 19, 84, 0.6)'
+      }
     },
   },
   plugins: [],

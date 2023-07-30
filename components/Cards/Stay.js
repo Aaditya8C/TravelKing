@@ -1,14 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Text } from "../Text";
 import StarRating from "../StarRating";
 import { LiaBicycleSolid } from "react-icons/lia";
 import { BiDirections } from "react-icons/bi";
 import { TbSpeedboat, TbCompass } from "react-icons/tb";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Stay = ({ data }) => {
   const commonItems = [LiaBicycleSolid, BiDirections, TbSpeedboat, TbCompass];
+  useEffect(() => {
+    Aos.init();
+  }, [])
   return (
-    <div className="w-full lg:h-[300px] grid lg:grid-cols-2 gap-6">
+    <div
+      className="w-full lg:h-[300px] grid lg:grid-cols-2 gap-6"
+      // data-aos={data.aosProp}
+      data-aos="fade-up"
+      data-aos-duration="500"
+    >
       <div
         className="bg-cover bg-center aspect-[4/4] md:aspect-[4/2] lg:aspect-[4/4] relative"
         style={{ backgroundImage: `url(${data.logo.src})` }}

@@ -17,6 +17,8 @@ import Room2 from '../public/Assets/Images/room2.jpg'
 import Room3 from '../public/Assets/Images/room3.jpg'
 import Room4 from '../public/Assets/Images/room4.jpg'
 
+import CoastalBayLogo from '../public/Assets/Images/CoastalBay.jpg'
+
 
 export const CityOne = City1;
 export const CityTwo = City2;
@@ -35,3 +37,4 @@ export const StayOne = Room1;
 export const StayTwo = Room2;
 export const StayThree = Room3;
 export const StayFour = Room4;
+export const CoastalBay = CoastalBayLogo;

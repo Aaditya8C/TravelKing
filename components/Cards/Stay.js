@@ -28,6 +28,7 @@ const Stay = ({ data }) => {
             color="white"
             size="14px"
             mobileSize="14px"
+            smallMobileSize="12px"
             weight="700"
             transform="uppercase"
             className="tracking-wide"
@@ -43,6 +44,7 @@ const Stay = ({ data }) => {
             color="orange"
             size="24px"
             mobileSize="24px"
+            smallMobileSize="20px"
             weight="700"
             className="tracking-wide"
           >

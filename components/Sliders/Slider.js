@@ -29,7 +29,7 @@ const Slider = () => {
           showThumbs={false}
           centerSlidePercentage={true}
           dynamicHeight={true}
-          autoPlay={true}
+          // autoPlay={true}
           infiniteLoop={true}
           renderArrowPrev={(onClickHandler, hasPrev, label) =>
             hasPrev && (
@@ -60,7 +60,7 @@ const Slider = () => {
             return (
               <div className={`${item.className} relative`} key={index}>
                 <motion.div
-                  className="absolute inset-[25%] flex flex-col justify-center md:inset-[30%] z-40 w-fit "
+                  className="absolute inset-0 flex flex-col justify-center  z-40 w-full "
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1, type: "spring" }}
@@ -69,6 +69,7 @@ const Slider = () => {
                     color="white"
                     size="96px"
                     mobileSize="30px"
+                    smallMobileSize="20px"
                     weight="800"
                     transform="uppercase"
                     className="tracking-wide font-Pacifico"
@@ -79,12 +80,23 @@ const Slider = () => {
                     color="white"
                     size="80px"
                     weight="600"
+                    mobileSize="30px"
+                    smallMobileSize="20px"
                     className="md:-mt-10 font-Pacifico"
                   >
                     {item.description}
                   </Text>
                   <div className="mt-6">
-                    <Button>Explore Now</Button>
+                    <Text
+                      color="white"
+                      size="16px"
+                      weight="600"
+                      mobileSize="14px"
+                      smallMobileSize="12px"
+                      className="md:-mt-10 font-Pacifico"
+                    >
+                      <Button>Explore Now</Button>
+                    </Text>
                   </div>
                 </motion.div>
               </div>

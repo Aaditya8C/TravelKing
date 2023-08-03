@@ -49,12 +49,13 @@ const PackageSlider = ({ data }) => {
           {/* <p>Hello</p> */}
           {data.map((item, index) => {
             return (
-              <div key={index} className="absolute z-50 py-10 w-full">
+              <div key={index} className="absolute z-50 py-4 lg:py-10 w-full">
                 <div className="flex flex-col gap-4 w-[80%] m-auto">
                   <Text
                     color="black"
                     size="30px"
                     mobileSize="20px"
+                    smallMobileSize="18px"
                     weight="700"
                     transform="uppercase"
                     className="tracking-wide"
@@ -66,6 +67,7 @@ const PackageSlider = ({ data }) => {
                     color="black"
                     size="16px"
                     mobileSize="14px"
+                    smallMobileSize="12px"
                     weight="500"
                     transform="lowercase"
                     className="tracking-wide "
@@ -73,7 +75,16 @@ const PackageSlider = ({ data }) => {
                     {item.desc}
                   </Text>
                   <div className="mt-6">
-                    <Button>Book Now</Button>
+                    <Text
+                      color="white"
+                      size="16px"
+                      weight="600"
+                      mobileSize="14px"
+                      smallMobileSize="12px"
+                      className="md:-mt-10 font-Pacifico"
+                    >
+                      <Button>Book Now</Button>
+                    </Text>
                   </div>
                 </div>
               </div>

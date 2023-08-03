@@ -71,7 +71,13 @@ const MiddleBar = () => {
               >
                 <Icon className="w-7 h-7" />
                 {/* <Image src={item.icon} width={20} height={20} alt="middleBar" /> */}
-                <Text transform="uppercase" size="14px" weight="600" mobileSize="16px">
+                <Text
+                  transform="uppercase"
+                  size="14px"
+                  weight="600"
+                  mobileSize="16px"
+                  smallMobileSize="14px"
+                >
                   {item.label}
                 </Text>
               </div>

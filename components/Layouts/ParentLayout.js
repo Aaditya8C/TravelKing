@@ -1,12 +1,9 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { CityOne } from "@/constants/imageConstant";
-import { CityTwo } from "@/constants/imageConstant";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import HeaderTwo from "@/components/HeaderTwo";
-import HeaderOne from "@/components/HeaderOne";
+import HeaderTwo from "@/components/Headers/HeaderTwo";
+import HeaderOne from "@/components/Headers/HeaderOne";
 import Slider from "@/components/Sliders/Slider";
-// import Slider from "@/components/Slider";
 import { useGesture, useScroll } from "react-use-gesture";
 
 const ParentLayout = ({ children }) => {

@@ -29,15 +29,16 @@ const MainSpots = ({ data }) => {
           color="white"
           align="center"
           mobileSize="25px"
+          smallMobileSize="20px"
         >
           {data.title}
         </Text>
-        <Text size="16px" color="white">
+        <Text size="16px" color="white" smallMobileSize="12px">
           From  {data.cost}
         </Text>
         <StarRating data={data}/>
         <Button>
-          <Text size="12px" weight="700" color="white" mobileSize="10px">
+          <Text size="12px" weight="700" color="white" mobileSize="10px" smallMobileSize="8px">
             SEE MORE
           </Text>
         </Button>

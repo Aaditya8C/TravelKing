@@ -1,7 +1,5 @@
 import { Inter } from "next/font/google";
 import ParentLayout from "@/components/Layouts/ParentLayout";
-import HeaderOne from "@/components/HeaderOne";
-import HeaderTwo from "@/components/HeaderTwo";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Text } from "@/components/Text";
 import MainSpots from "@/components/Cards/MainSpots";
@@ -16,11 +14,11 @@ import {
   StayFour,
 } from "@/constants/imageConstant";
 import Stay from "@/components/Cards/Stay";
-import Head from "next/head";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Trending from "@/components/Cards/Trending";
+import Footer from "@/components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -176,10 +174,11 @@ export default function Home() {
                 color="black"
                 mobileSize="25px"
                 align="center"
+                smallMobileSize="20px"
               >
                 We have the best tours
               </Text>
-              <Text size="24px" color="black" align="center" className="italic">
+              <Text size="24px" color="black" align="center" className="italic" smallMobileSize="18px">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Perspiciatis neque tenetur quas itaque officia laborum provident
                 quia odit cum corporis.
@@ -209,6 +208,7 @@ export default function Home() {
             color="black"
             size="30px"
             mobileSize="20px"
+            smallMobileSize="18px"
             weight="700"
             transform="uppercase"
             className="tracking-wide"
@@ -228,6 +228,7 @@ export default function Home() {
           <Text
             size="30px"
             mobileSize="20px"
+            smallMobileSize="18px"
             weight="700"
             transform="uppercase"
             className="tracking-wide"
@@ -242,6 +243,7 @@ export default function Home() {
           </div>
         </div>
         <div className="h-1 bg-travelking" />
+        <Footer/>
       </ParentLayout>
     </>
   );

@@ -12,6 +12,9 @@ export const Text = styled.p`
 
 
   @media screen and (max-width: 768px) {
-    font-size: ${(props) => (props.mobileSize ? props.mobileSize : "18px")};
+    font-size: ${(props) => (props.mobileSize ? props.mobileSize : props.size)};
+  }
+  @media screen and (max-width: 300px) {
+    font-size: ${(props) => (props.smallMobileSize ? props.smallMobileSize : props.size)};
   }
 `;

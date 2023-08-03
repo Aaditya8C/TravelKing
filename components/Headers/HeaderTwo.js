@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Text } from "./Text";
+import { Text } from "../Text";
 import { FiMenu } from "react-icons/fi";
 import classNames from "classnames";
 import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
+import Lottie from "react-lottie";
+import * as animationData from "../../public/Assets/Lotties/bus_animation.json";
 
 const HeaderTwo = () => {
   const navbarValues = [
@@ -20,13 +22,30 @@ const HeaderTwo = () => {
       label: "Contact",
     },
   ];
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
   const [showMobileNav, setShowMobileNav] = useState(false);
 
   return (
-    <div className="bg-dark-blue lg:bg-[#350a4e] lg:bg-opacity-70 z-50 lg:grid grid-cols-[300px,400px,1fr,200px] py-4 lg:py-10 items-center fixed lg:relative top-0  inset-x-0">
+    <div className="bg-dark-blue lg:bg-[#350a4e] lg:bg-opacity-70 z-50 lg:grid grid-cols-[200px,400px,1fr,300px] py-4 lg:py-2 items-center fixed lg:relative top-0  inset-x-0">
       <div></div>
       <div className="flex justify-between px-4 lg:px-0">
-        <Text transform="uppercase" size="24px" weight="700" color="white" className="lg:cursor-pointer" onClick={() => window.location.reload()}>
+        <Text
+          transform="uppercase"
+          size="24px"
+          weight="700"
+          color="white"
+          smallMobileSize="18px"
+          className="lg:cursor-pointer"
+          onClick={() => window.location.reload()}
+        >
           TravelKing
         </Text>
         <FiMenu
@@ -46,10 +65,19 @@ const HeaderTwo = () => {
               className="relative group lg:hover:cursor-pointer"
             >
               {item.label}
-              <span className="group-hover:opacity-100 bottom-0 left-0 top-6 absolute w-full h-1 bg-gradient-to-r from-[#fa9e1b] to-[#8d4fff] opacity-0 transition-all duration-500"></span>
+              <span className="group-hover:opacity-100 bottom-0 left-0 top-6 absolute w-full h-1 bg-gradient-to-r from-[#fa9e1b] to-[#8d4fff] opacity-0 transition-all duration-500 transform origin-center"></span>
             </Text>
           );
         })}
+      </div>
+      <div className="hidden lg:block">
+        <Lottie
+          options={defaultOptions}
+          height={100}
+          width={100}
+          // isStopped={this.state.isStopped}
+          // isPaused={this.state.isPaused}
+        />
       </div>
       {showMobileNav && (
         <MobileNav

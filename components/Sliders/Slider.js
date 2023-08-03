@@ -29,7 +29,7 @@ const Slider = () => {
           showThumbs={false}
           centerSlidePercentage={true}
           dynamicHeight={true}
-          // autoPlay={true}
+          autoPlay={true}
           infiniteLoop={true}
           renderArrowPrev={(onClickHandler, hasPrev, label) =>
             hasPrev && (

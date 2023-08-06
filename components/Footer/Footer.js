@@ -64,12 +64,14 @@ const Footer = () => {
     Aos.init();
   }, []);
   return (
-    <div className="bg-[#3d0c58] mt-20">
+    <div
+      className="bg-[#3d0c58] mt-20"
+      data-aos="fade-up"
+      data-aos-duration="500"
+    >
       <div className="">
         <div
           className="grid lg:grid-cols-3 gap-10 z-40 p-6 py-16 lg:px-0 lg:w-[70%] m-auto "
-          data-aos="fade-up"
-          data-aos-duration="500"
         >
           {/* About */}
           <div className="grid gap-8">

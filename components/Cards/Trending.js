@@ -10,7 +10,7 @@ const Trending = ({ data }) => {
   }, []);
   return (
     <div
-      className="grid grid-cols-2 place-items-center"
+      className="flex gap-6 md:gap-10"
       data-aos="fade-up"
       data-aos-duration="1000"
     >
